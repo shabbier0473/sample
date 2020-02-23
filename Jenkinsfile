@@ -1,36 +1,13 @@
 pipeline{
-    agent{
-        label 'maven'
-    }
+    agent any
     stages{
-        stage ('build master'){
-            when {
-                branch 'master'
-            }
+        stage ('sonar analysis'){
             tools{
-                maven 'MAVEN_HOME'
-                jdk 'JAVA_HOME'
+                sonar 'SONAR_RUNNER_HOME'
             }
             steps{
-                timestamps{
-                 echo '========master======='
-                 sh 'mvn install' 
-                }
-               
-            }
-        }
-        stage ('build release'){
-            when {
-                branch 'release'
-            }
-            tools{
-                maven 'MAVEN_HOME'
-            }
-            steps{
-                echo '======release========='
-                sh 'mvn install'
+                sh '${SONAR_RUNNER_HOME}/sonar-scanner'
             }
         }
     }
 }
-
