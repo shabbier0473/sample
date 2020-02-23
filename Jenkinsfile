@@ -1,12 +1,12 @@
 pipeline{
     agent any
     stages{
-        stage ('build'){
+        stage ('sonar'){
             tools{
-                maven 'MAVEN_HOME'
+                sonar 'sonar'
             }
             steps{
-                sh 'mvn --version'
+                sh '${SONAR_RUNNER_HOME}/sonar-scanner'
             }
         }
     }
