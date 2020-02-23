@@ -6,10 +6,6 @@ pipeline{
                 sonar 'SONAR_RUNNER_HOME'
                 withSonarQubeEnv('sonar')
                 sh "${scannerHome}/bin/sonar-scanner"
-            }
-            steps{
-                sh 'mvn sonar:sonar'
-            }
         }
         stage ('build'){
             tools{
