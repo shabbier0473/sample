@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage ('sonar analysis'){
+        stage('SonarQube analysis'){
             tools{
                 sonar 'SONAR_RUNNER_HOME'
             }
