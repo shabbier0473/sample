@@ -3,7 +3,8 @@ pipeline{
     stages{
         stage('SonarQube analysis'){
            steps{
-                sh '${SONAR_RUNNER_HOME}/sonar-scanner'
+               sh'mvn clean' 
+               sh'${SONAR_RUNNER_HOME}/sonar-scanner'
             }
         }
     }
