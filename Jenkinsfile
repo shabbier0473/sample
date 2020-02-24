@@ -33,6 +33,10 @@ pipeline{
             when {
                 buildingTag()
             }
+            tools{
+                maven 'MAVEN_HOME'
+            }
+
             steps{
                 sh 'mvn test'
                 echo "=====tag building===="
