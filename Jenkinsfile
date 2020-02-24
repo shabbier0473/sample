@@ -1,11 +1,14 @@
 pipeline{
     agent any
     stages{
-        stage('SonarQube analysis'){
-           steps{
-               sh'mvn clean' 
-               sh'${SONAR_RUNNER_HOME}/sonar-scanner'
+        stage ('build'){
+            tools{
+                maven 'MAVEN_HOME'
+            }
+            steps{
+                sh 'mvn --version'
             }
         }
     }
 }
+
