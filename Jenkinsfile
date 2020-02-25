@@ -12,7 +12,7 @@ pipeline{
                  echo '========master======='
                  sh 'mvn install'
                  echo '=====master'
-                 sh 'mkdir $branch'
+                 sh 'mkdir ${branch}'
                 }
             }
         }
