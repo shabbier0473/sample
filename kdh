@@ -17,7 +17,7 @@ pipeline{
                
             }
         }
-        stage ('build release'){
+        stage ('build origin/release'){
             when {
                 branch 'origin/release'
             }
