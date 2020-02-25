@@ -29,11 +29,6 @@ pipeline{
                 sh 'mvn install'
             }
         }
-        stage 'shabbir'{
-            steps{
-                echo 'shabbir'
-            }
-        }    
         stage ('tag build'){
             when {
                 buildingTag()
