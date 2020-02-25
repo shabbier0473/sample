@@ -1,9 +1,9 @@
 pipeline{
     agent any
     stages{
-        stage ('build master'){
+        stage ('master'){
             when {
-                branch 'master'
+                branch='master'
             }
             tools{
                 maven 'MAVEN_HOME'
