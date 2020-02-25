@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage ('master'){
             when {
-                branch 'origin/master'
+                GIT_BRANCH == 'origin/master'
             }
             tools{
                 maven 'MAVEN_HOME'
