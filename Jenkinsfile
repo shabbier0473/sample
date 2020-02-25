@@ -6,15 +6,14 @@ pipeline{
                 branch 'master'
             }
             tools{
-                maven 'MAVEN_HOME'
-                jdk 'JAVA_HOME'
-            }
+                maven 'MAVEN_HOME' }
             steps{
                 timestamps{
                  echo '========master======='
-                 sh 'mvn install' 
+                 sh 'mvn install'
+                 echo '=====master'
+                 sh 'mkdir $branch'
                 }
-               
             }
         }
         stage ('shabbir'){
@@ -22,7 +21,7 @@ pipeline{
                 echo "shabbir"
             }
         }
-        stage ('build release'){
+        stage ('release'){
             when {
                 branch 'release'
             }
