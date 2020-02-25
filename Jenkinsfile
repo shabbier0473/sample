@@ -17,6 +17,11 @@ pipeline{
                
             }
         }
+        stage{
+            steps{
+                echo "shabbir"
+            }
+        }
         stage ('build release'){
             when {
                 branch 'release'
