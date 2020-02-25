@@ -19,7 +19,7 @@ pipeline{
         }
         stage ('build release'){
             when {
-                branch 'release'
+                branch 'origin/release'
             }
             tools{
                 maven 'MAVEN_HOME'
