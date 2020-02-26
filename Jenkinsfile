@@ -5,7 +5,7 @@ pipeline{
     }
     stages{
         stage (master) {
-            when { branch 'master'
+            when { branch 'master' }
             steps{
                 echo "master"
             }
