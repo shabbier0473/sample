@@ -10,7 +10,8 @@ pipeline{
                 expression {GIT_BRANCH == 'origin/master'  }
             }
             steps{
-                echo "master"
+                echo "========master======="
+                sh 'mvn install'
             }
         }
         stage ('release'){
@@ -18,7 +19,9 @@ pipeline{
                 expression {GIT_BRANCH == 'origin/release'  }
             }
             steps{
-                    echo 'release' }
+                 sh 'mvn --version' 
+                 echo '========release=========='
+            }
         }
     }
 }
