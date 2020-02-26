@@ -10,6 +10,8 @@ pipeline{
                 expression {GIT_BRANCH == 'origin/master'  }
             }
             steps{
+                sh 'cd ..'
+                sh 'cd sample'
                 echo "========master======="
                 sh 'mvn install'
             }
