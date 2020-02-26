@@ -10,7 +10,7 @@ pipeline{
                 echo "master"
             }
         }
-        stage ('release'){
+        stage ('release') ('release'){
             stage {
                 steps{
                     echo 'release'
