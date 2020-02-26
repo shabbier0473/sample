@@ -12,6 +12,7 @@ pipeline{
             tools { maven 'MAVEN_HOME' }
             steps{
                 echo "master"
+                sh 'mvn --version'
             }
         }
         stage ('release'){
