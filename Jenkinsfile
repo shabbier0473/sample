@@ -18,7 +18,7 @@ pipeline{
             when {
                 expression {GIT_BRANCH == 'origin/release'  }
             }
-            tools { maven 'MAVEN_HOME'
+            tools { maven 'MAVEN_HOME' }
             steps{
                     echo 'release' }
         }
