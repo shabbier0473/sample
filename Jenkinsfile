@@ -9,7 +9,7 @@ pipeline{
             when { 
                 expression {GIT_BRANCH == 'origin/master'  }
             }
-            tools { maven 'MAVEN_HOME'
+            tools { maven 'MAVEN_HOME' }
             steps{
                 echo "master"
             }
@@ -20,8 +20,7 @@ pipeline{
             }
             tools { maven 'MAVEN_HOME' }
             steps{
-                    echo 'release'
-            }
+                    echo 'release' }
         }
     }
 }
