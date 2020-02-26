@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage (master) {
             when { 
-                branch { params.BRANCH == 'master'  }
+                BRANCH { params.BRANCH == 'master'  }
             }
             steps{
                 echo "master"
