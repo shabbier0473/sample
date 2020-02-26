@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage (master) {
             when { 
-                BRANCH { params.BRANCH == 'master'  }
+                expression {GIT_BRANCH == 'origin/master'  }
             }
             steps{
                 echo "master"
