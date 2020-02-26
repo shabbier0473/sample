@@ -5,7 +5,7 @@ pipeline{
     }
     stages{
         stage (master) {
-            when { BRANCH 'origin/master' }
+            when { BRANCH 'master' }
             steps{
                 echo "master"
             }
