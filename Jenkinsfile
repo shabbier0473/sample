@@ -1,51 +1,21 @@
 pipeline{
-    agent any
+    agent any 
+    parameters{
+        gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
+    }
     stages{
-        stage ('master'){
-            when {
-                branch 'master'
-            }
-            tools{
-                maven 'MAVEN_HOME' }
+        stage (master) {
+            when { branch 'master'
             steps{
-                timestamps{
-                 echo '========master======='
-                 sh 'mvn install'
-                 echo '=====master'
-                 sh 'mkdir ${branch}'
-                }
-            }
-        }
-        stage ('shabbir'){
-            steps{
-                echo "shabbir"
+                echo "master"
             }
         }
         stage ('release'){
-            when {
-                branch 'release'
-            }
-            tools{
-                maven 'MAVEN_HOME'
-            }
-            steps{
-                echo '======release========='
-                sh 'mvn install'
-            }
-        }
-        stage ('tag build'){
-            when {
-                buildingTag()
-            }
-            tools{
-                maven 'MAVEN_HOME'
-            }
-
-            steps{
-                sh 'mvn test'
-                echo "=====tag building===="
+            stage {
+                steps{
+                    echo 'release'
+                }
             }
         }
     }
 }
-
