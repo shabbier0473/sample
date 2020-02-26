@@ -10,12 +10,9 @@ pipeline{
                 echo "master"
             }
         }
-        stage ('release') ('release'){
-            stage {
-                steps{
-                    echo 'release'
-                }
-            }
+        stage ('release'){
+            steps{
+                    echo 'release' }
         }
     }
 }
