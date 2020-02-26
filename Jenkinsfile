@@ -9,21 +9,18 @@ pipeline{
             when { 
                 expression {GIT_BRANCH == 'origin/master'  }
             }
+            tools { maven 'MAVEN_HOME'
             steps{
-                sh 'cd ..'
-                sh 'cd sample'
-                echo "========master======="
-                sh 'mvn install'
+                echo "master"
             }
         }
         stage ('release'){
             when {
                 expression {GIT_BRANCH == 'origin/release'  }
             }
+            tools { maven 'MAVEN_HOME'
             steps{
-                 sh 'mvn --version' 
-                 echo '========release=========='
-            }
+                    echo 'release' }
         }
     }
 }
