@@ -20,7 +20,8 @@ pipeline{
             }
             tools { maven 'MAVEN_HOME' }
             steps{
-                    echo 'release' }
+                    echo 'release'
+            }
         }
     }
 }
