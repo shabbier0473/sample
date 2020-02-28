@@ -1,4 +1,3 @@
 @Library("lib") _
 
 execBuild('build')
-execTest('test')
