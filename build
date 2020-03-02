@@ -1,2 +1,3 @@
 @Library("lib") _
 Test("test")
+def("sonar:sonar")
