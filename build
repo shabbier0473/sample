@@ -1,4 +1,4 @@
 @Library("lib") _
 
 Test("test")
-Sonar("Sonar")
+Sonar("sonar")
