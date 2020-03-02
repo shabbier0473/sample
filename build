@@ -1,3 +1,2 @@
 @Library("lib") _
 Test("test")
-as("as")
