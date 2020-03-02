@@ -1,4 +1,4 @@
 @Library("lib") _
 
 execTest('test')
-exexDeploy('deploy')
+
