@@ -16,7 +16,7 @@ pipeline{
         }
         stage('compile'){
             steps {
-                build compile ,parameters:[string(name:'workspace',value: workspace)]
+                build ('compile' ,parameters:[string(name:'workspace',value: workspace)])
             }
             
         }
