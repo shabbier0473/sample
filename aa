@@ -1,4 +1,4 @@
-def workspace
+def workspace = "pwd"
 pipeline{
     agent { label 'maven' } 
     parameters{
@@ -10,7 +10,7 @@ pipeline{
             tools { maven "MAVEN_HOME" }
             steps{
                 sh 'mvn validate'
-                workspace= pwd()
+                echo 'pwd'
             }
             
         }
