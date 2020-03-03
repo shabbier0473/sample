@@ -13,15 +13,10 @@ pipeline{
             
         }
         stage('compile'){
-            when { expression {GIT_BRANCH == 'origin/master'  }
             steps {
                 build job: 'compile' ,parameters: [string(name:'work',value: '/home/maven/workspace/mainpipeline')]
             }
-        }
-        stage{
-            steps{
-                build job:'test' ,parameters:[string (name:'work',value: '/home/maven/workspace/mainpipeline')]
-            }
+            
         }
     }
 }    
