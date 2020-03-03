@@ -1,4 +1,4 @@
-def workspace = "pwd"
+def workspace = "/home/maven/workspace/mainpipeline"
 pipeline{
     agent { label 'maven' } 
     parameters{
