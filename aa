@@ -18,7 +18,7 @@ pipeline{
             }
             
         }
-        stage{
+        stage('test'){
             steps{
                 build job:'test' ,parameters:[string (name:'work',value: '/home/maven/workspace/mainpipeline')]
             }
