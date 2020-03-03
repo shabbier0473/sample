@@ -4,6 +4,7 @@ pipeline{
         stage('compile'){
             tools { maven "MAVEN_HOME" }
             steps{
+                sh 'cd /home/maven/workspace/mainpipeline'
                 sh 'mvn compile'
             }
         }
