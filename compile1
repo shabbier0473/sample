@@ -1,6 +1,6 @@
 pipeline{
-    agent none { 
-        customWorkspace '/var/lib/jenkins/workspace/mainpipeline'
+    agent { label 'maven'
+        customWorkspace '/home/maven/workspace/mainpipeline'
     }
     stages{
         stage('compile'){
