@@ -1,5 +1,5 @@
 pipeline{
-    agent any{ 
+    agent none { 
         customWorkspace '/var/lib/jenkins/workspace/mainpipeline'
     }
     stages{
