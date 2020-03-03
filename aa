@@ -10,7 +10,7 @@ pipeline{
             tools { maven "MAVEN_HOME" }
             steps{
                 sh 'mvn validate'
-                echo 'pwd'
+                sh "echo 'pwd'"
             }
             
         }
