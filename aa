@@ -6,9 +6,10 @@ pipeline{
     }
     stages{
         stage('compile'){
-            
-        }
-        stage('unit test'){
+            tools { maven "MAVEN_HOME" }
+            steps{
+                sh 'mvn compile'
+            }
             
         }
     }
