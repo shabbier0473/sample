@@ -17,6 +17,12 @@ pipeline{
                 build job: 'compile' ,parameters: [string(name:'work',value: '/home/maven/workspace/mainpipeline')]
             }
             
+        stage('compile'){
+            steps {
+                build job: 'test' ,parameters: [string(name:'work',value: '/home/maven/workspace/mainpipeline')]
+            }
+            
         }
+        
     }
 }    
