@@ -1,7 +1,5 @@
 pipeline{
-    agent { label 'maven'
-        customWorkspace '/home/maven/workspace/mainpipeline'
-    }
+    agent { label 'maven' }
     stages{
         stage('compile'){
             tools { maven "MAVEN_HOME" }
