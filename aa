@@ -1,3 +1,4 @@
+def workspace
 pipeline{
     agent { label 'maven' } 
     parameters{
@@ -5,10 +6,16 @@ pipeline{
         gitParameter name: 'TAG',type: 'PT_TAG', selectedValue: 'NONE'
     }
     stages{
-        stage('compile'){
+        stage('validate'){
             tools { maven "MAVEN_HOME" }
             steps{
                 sh 'mvn validate'
+            }
+            
+        }
+        stage('compile'){
+            steps {
+                build "compile"
             }
             
         }
