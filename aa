@@ -1,3 +1,4 @@
+when conditional pipeline with stage
 pipeline{
     agent any 
     parameters{
@@ -20,7 +21,23 @@ pipeline{
             }
             tools { maven 'MAVEN_HOME' }
             steps{
-                    echo 'release' }
+                    echo 'release' 
         }
     }
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
