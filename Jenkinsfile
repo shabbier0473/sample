@@ -7,7 +7,6 @@ pipeline{
     }
     stages{
         stage ("compile"){
-            when { expression { BRANCH == origin/devlop } }
             steps{
                 sh "mvn compile"
             }
