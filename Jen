@@ -1,5 +1,5 @@
 @Library("code") _
 execBuild('build')
-execBuild('deploy')
+
 
 
