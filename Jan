@@ -1,2 +1,2 @@
 @Library("node") _
-node("build")
+node("test")
