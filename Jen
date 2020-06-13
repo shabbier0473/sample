@@ -1,4 +1,4 @@
-@Library("lib") _
+@Library("code") _
+execBuild('build')
 
-execTest('test')
 
