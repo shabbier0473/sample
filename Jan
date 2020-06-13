@@ -1,2 +1,2 @@
-@Library('node') _
+@Library("node") _
 node('test')
